@@ -4,3 +4,11 @@ footer {
     color: #fff;
     text-align: center;
 }
+
+.img-fix {
+    min-width: 35px;
+}
+
+.textfix {
+    font-weight: normal;
+}
