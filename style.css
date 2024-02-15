@@ -12,3 +12,10 @@ footer {
 .textfix {
     font-weight: normal;
 }
+
+.btn-1 {
+    text-align: center;
+    justify-content: center;
+    height: 100px;
+    width: 200px;
+}
