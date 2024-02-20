@@ -19,3 +19,26 @@ footer {
     height: 100px;
     width: 200px;
 }
+
+img.choices {
+    height: 200px;
+    width: 250px;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
+.score {
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 250px;
+    height: 100px;
+    background-color: #D3D3D3;
+}
+
+.textfix2 {
+    height: 100px;
+}
+
+.verticalLine {
+    
+  }
