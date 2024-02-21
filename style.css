@@ -1,3 +1,16 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: inherit;
+  }
+
 header,
 footer {
     background-color: gray;
@@ -44,4 +57,83 @@ img.choices {
     height: 95px;
     position: relative;
     top: 0;
+}
+
+.mode1 {
+    border: 5px solid black;
+    height: 150px;
+    border-radius: 5px;
+    width: 300px;
+    background-image: url('Images/rps.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.mode2 {
+    border: 5px solid black;
+    height: 150px;
+    border-radius: 5px;
+    width: 300px;
+    background-image: url('Images/threebirds.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.mode3 {
+    border: 5px solid black;
+    height: 150px;
+    border-radius: 5px;
+    width: 300px;
+    background-image: url('Images/dc.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.mode1:hover {
+    border: 5px solid black;
+    border-radius: 5px;
+    opacity: 0.5;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.mode2:hover {
+    border: 5px solid black;
+    border-radius: 5px;
+    opacity: 0.5;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.mode3:hover {
+    border: 5px solid black;
+    border-radius: 5px;
+    opacity: 0.5;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.mode1:active {
+    opacity: 1;
+}
+
+.mode2:active {
+    opacity: 1;
+}
+
+.mode3:active {
+    opacity: 1;
+    color: white;
+}
+
+.textfix3 {
+    align-items: center;
+    position: relative;
+    top: 20%;
 }
