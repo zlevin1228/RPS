@@ -39,6 +39,9 @@ img.choices {
     height: 100px;
 }
 
-.verticalLine {
-    
-  }
+.vl {
+    border-left: 5px solid black;
+    height: 95px;
+    position: relative;
+    top: 0;
+}
