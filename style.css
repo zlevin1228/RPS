@@ -38,6 +38,8 @@ img.choices {
     width: 250px;
     border: 5px solid black;
     border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .score {
