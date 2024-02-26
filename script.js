@@ -1,9 +1,12 @@
-Window.onload = changeUsername();
+Window.onload = changeUsername(); // Runs function when page loads
 
 function changeUsername(element) {
   var username = prompt("Enter your username:"); // Asks for your username
   document.getElementById("username").innerHTML = username; // Displays Username
 }
+
+var userPoints = 0 // Sets initial score
+var computerPoints = 0  
 
 function playGame() {
   var userChoice = prompt("Enter your selection:"); // Asks user for choice
@@ -42,57 +45,47 @@ function playGame() {
 
   var choice1 = userChoice; // sets new variables for the function
   var choice2 = computerChoice;
-  const scoreUser = document.getElementById('userScore') // Setting score to start at 0
-  const scoreComputer = document.getElementById('computerScore')
-  var userPoints = 0
-  var computerPoints = 0
-  let result = ''
 
-
-  if (choice1.toUpperCase() === choice2.toUpperCase()) {
+  if (choice1.toUpperCase() === choice2.toUpperCase()) { // If you win, lose, or tie it will display a message accordingly. It will also change a variable to help update the scoreboard
     document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">It is a tie!</h3>';
-    result = 'its a draw!'
   } else if (choice1.toUpperCase() === "ROCK") {
     if (choice2.toUpperCase() === "PAPER") {
       document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose PAPER, you LOSE!</h3>';
-      result = 'you lost!'
-    } else
+      computerPoints++
+    } else if (choice2.toUpperCase() === "SCISSORS")
       document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose SCISSORS, you WIN!</h3>';
-    result = 'you win!'
-  } else if (choice1.toUpperCase() === "PAPER") {
+      userPoints++
+  } else if (choice1.toUpperCase() === "PAPER") { 
     if (choice2.toUpperCase() === "SCISSORS") {
       document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose SCISSORS, you LOSE!</h3>';
-      result = 'you lost!'
-    } else
+      computerPoints++
+    } else if (choice2.toUpperCase() === "ROCK")
       document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose ROCK, you WIN!</h3>';
-    result = 'you win!'
-  } else if (choice1.toUpperCase() === "SCISSORS") {
+      userPoints++
+  } else if (choice1.toUpperCase() === "PAPER") {
     if (choice2.toUpperCase() === "ROCK") {
-      document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose ROCK, you lose!</h3>';
-      result = 'you lost!'
-    } else
+      document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose ROCK, you LOSE!</h3>';
+      computerPoints++
+    } else if (choice2.toUpperCase() === "SCISSORS")
       document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose PAPER, you WIN!</h3>';
-    result = 'you win!'
+      userPoints++
   } else if (choice1.toUpperCase() === "BOMB") {
+    userPoints++
     document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">You found the secret message! You WIN!</h3>'
-    result = 'you win!'
   }
 
-  if (result == 'you win!') {
-    ps += 1
-  }
-  else if (result == 'you lose!') {
-    console.log("ok2")
-    cs += 1
-  }
-  else {
-    cs += 1
-    ps += 1
+  if (computerPoints === 5) { // If the scoreboard reaches 5 display a new message
+    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Game over, Computer WINS! You LOSE!</h3>';
+    computerPoints = 0
+    userPoints = 0
+  } else if (userPoints === 5) {
+    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">You WIN!</h3>';
+    userPoints = 0
+    computerPoints = 0
   }
 
-  computerScore.innerHTML = ("computerPoints");
-  userScore.innerHTML = ("userPoints");
-
+  document.getElementById('userScore').innerHTML = '<h2 id="userScore">' + userPoints + '</h2>';
+  document.getElementById('computerScore').innerHTML = '<h2 id="computerScore">' + computerPoints + '</h2>'; //Displays the new score
 }
 
 
