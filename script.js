@@ -42,29 +42,56 @@ function playGame() {
 
   var choice1 = userChoice; // sets new variables for the function
   var choice2 = computerChoice;
+  const scoreUser = document.getElementById('userScore') // Setting score to start at 0
+  const scoreComputer = document.getElementById('computerScore')
+  var userPoints = 0
+  var computerPoints = 0
+  let result = ''
 
 
   if (choice1.toUpperCase() === choice2.toUpperCase()) {
     document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">It is a tie!</h3>';
+    result = 'its a draw!'
   } else if (choice1.toUpperCase() === "ROCK") {
     if (choice2.toUpperCase() === "PAPER") {
       document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose PAPER, you LOSE!</h3>';
+      result = 'you lost!'
     } else
       document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose SCISSORS, you WIN!</h3>';
+    result = 'you win!'
   } else if (choice1.toUpperCase() === "PAPER") {
     if (choice2.toUpperCase() === "SCISSORS") {
       document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose SCISSORS, you LOSE!</h3>';
+      result = 'you lost!'
     } else
       document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose ROCK, you WIN!</h3>';
+    result = 'you win!'
   } else if (choice1.toUpperCase() === "SCISSORS") {
     if (choice2.toUpperCase() === "ROCK") {
       document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose ROCK, you lose!</h3>';
+      result = 'you lost!'
     } else
       document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">Computer chose PAPER, you WIN!</h3>';
+    result = 'you win!'
   } else if (choice1.toUpperCase() === "BOMB") {
-    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">You found the secret message! You win!</h3>'
+    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">You found the secret message! You WIN!</h3>'
+    result = 'you win!'
   }
 
+  if (result == 'you win!') {
+    ps += 1
+  }
+  else if (result == 'you lose!') {
+    console.log("ok2")
+    cs += 1
+  }
+  else {
+    cs += 1
+    ps += 1
+  }
+
+  computerScore.innerHTML = ("computerPoints");
+  userScore.innerHTML = ("userPoints");
 
 }
 
