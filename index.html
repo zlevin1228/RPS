@@ -26,23 +26,23 @@
             <div class="row justify-content-center align-items-center text-center">
 
                 <div class="col-3 text-center justify-content-center align-items-center">
-                    <h1 class="display-5">
+                    <h1 class="display-5" id="rockitem">
                         Rock
                 </div>
                 <div class="col-1">
-                    <img class="img-fluid img-fix" src="Images/rock.png" /><!--Img from Google-->
+                    <img class="img-fluid img-fix" src="Images/rock.png" id="rockimage" /><!--Img from Google-->
                 </div>  <div class="col-3 text-center justify-content-center align-items-center">
-                    <h1 class="display-5">
+                    <h1 class="display-5" id="paperitem">
                         Paper
                 </div>
                 <div class="col-1">
-                    <img class="img-fluid img-fix" src="Images/paper.png" /><!--Img from Google-->
+                    <img class="img-fluid img-fix" src="Images/paper.png" id="paperimage" /><!--Img from Google-->
                 </div>  <div class="col-3 text-center justify-content-center align-items-center">
-                    <h1 class="display-5">
+                    <h1 class="display-5" id="scissorsitem">
                         Scissors
                 </div>
                 <div class="col-1">
-                    <img class="img-fluid img-fix" src="Images/scissors.png" /><!--Img from Google-->
+                    <img class="img-fluid img-fix" src="Images/scissors.png" id="scissorsimage" /><!--Img from Google-->
                 </div>
             </div>
         </div>
@@ -52,13 +52,13 @@
             <h5 class="textfix" id="username">username</h1>
         </div>
         <div class="container text-center justify-content-center align-items-center">
-            <div class="btn border-5 border-black btn-lg btn-secondary text-white btn-1" onclick="playGame()">
+            <div class="btn border-5 border-black btn-lg btn-secondary text-white btn-1" onclick="gameChoice()">
                 <h3>Start<br>Game!</h3>
             </div>
             <hr>
             <div>
                 <h4><u>How to Play</u></h4>
-                <h6>Press the 'Start Game!' button to begin. A prompt will pop up and ask you to type in a choice. You can choose from either ROCK, PAPER, SCISSORS, or a secret option that will guarantee you a win. The computer will display your choice and make its own choice. ROCK beats SCISSORS, SCISSORS beats PAPER, and PAPER beats ROCK. You will either win, tie, or lose. Your wins and the computer's wins will be displayed in the scoreboard below. The first one to 5 round wins is the winner!</h6>
+                <h6 id="howtoplay">Press the 'Start Game!' button to begin. A prompt will pop up and ask you to type in a choice. You can choose from either ROCK, PAPER, SCISSORS, or a secret option that will guarantee you a win. The computer will display your choice and make its own choice. ROCK beats SCISSORS, SCISSORS beats PAPER, and PAPER beats ROCK. You will either win, tie, or lose. Your wins and the computer's wins will be displayed in the scoreboard below. The first one to 5 round wins is the winner!</h6>
             </div>
             <hr>
             <div class="row p-md-2">
@@ -96,16 +96,16 @@
             <h4><u>Select Mode</u></h4>
             <div class="row p-md-3">    
                 <div class="col-md-4 col-12 py-2">
-                    <div class="btn mode1 align-items-center">
+                    <div class="btn mode1 align-items-center" onclick="playGameOne()">
                         <h5 class="textfix3">Rock<br>Paper<br>Scissors</h4>
                     </div>
                 </div>
                 <div class="col-md-4 col-12 py-2">
-                    <div class="btn mode2">
+                    <div class="btn mode2" onclick="playGameTwo()">
                         <h5 class="textfix3">Articuno<br>Zapdos<br>Moltres</h4>
                     </div>
                 </div>
-                <div class="col-md-4 col-12 py-2">
+                <div class="col-md-4 col-12 py-2" onclick="playGameThree()">
                     <div class="btn mode3">
                         <h5 class="textfix3">Batman<br>Superman<br>Wonder Woman</h4>
                     </div>
