@@ -1,6 +1,6 @@
 Window.onload = changeUsername(); // Runs function when page loads
 
-function changeUsername(element) {
+function changeUsername() {
   var username = prompt("Enter your username:"); // Asks for your username
   document.getElementById("username").innerHTML = username; // Displays Username
 }
