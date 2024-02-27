@@ -22,6 +22,16 @@ footer {
     min-width: 35px;
 }
 
+.img-fix2 {
+    min-width: 35px;
+    position: relative;
+    left: -250%;
+}
+
+.text-fix {
+    font-size: 100%;
+}
+
 .textfix {
     font-weight: normal;
 }
