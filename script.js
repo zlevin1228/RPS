@@ -195,11 +195,11 @@ function playGameDC() {
   ) {
     // Asks for user choices and if the words uppercase match then it will not give an error message
     if (userChoice.toUpperCase() === "BATMAN") {
-      (document.getElementById("usersChoice").src = "Images/batman.png");
+      (document.getElementById("usersChoice").src = "Images/batmans.png");
     } else if (userChoice.toUpperCase() === "SUPERMAN") {
-      (document.getElementById("usersChoice").src = "Images/superman.webp");
+      (document.getElementById("usersChoice").src = "Images/supermans.png");
     } else if (userChoice.toUpperCase() === "WONDER WOMAN") {
-      (document.getElementById("usersChoice").src = "Images/wonderwoman.png");
+      (document.getElementById("usersChoice").src = "Images/wonderwomans.png");
     } else if (userChoice.toUpperCase() === "GREEN LANTERN") {
       (document.getElementById("usersChoice").src = "Images/greenlantern.png");
     }
@@ -211,13 +211,13 @@ function playGameDC() {
 
   if (computerChoice <= 0.33) {
     computerChoice = "batman";
-    (document.getElementById("computersChoice").src = "Images/batman.png");
+    (document.getElementById("computersChoice").src = "Images/batmans.png");
   } else if (computerChoice <= 0.67) {
     computerChoice = "superman";
-    (document.getElementById("computersChoice").src = "Images/superman.webp");
+    (document.getElementById("computersChoice").src = "Images/supermans.png");
   } else {
     computerChoice = "wonder woman";
-    (document.getElementById("computersChoice").src = "Images/wonderwoman.png");
+    (document.getElementById("computersChoice").src = "Images/wonderwomans.png");
   }
 
   var choice1 = userChoice; // sets new variables for the function
@@ -332,8 +332,8 @@ function playGameThree() { // Changes game mode to Pokemon
   document.getElementById('scissorsimage2').src = 'Images/wonderwoman.png'
   document.getElementById('scissorsitem2').innerText = 'Wonder Woman'
   document.getElementById('howtoplay').innerText = 'Press the Start Game! button to begin. A prompt will pop up and ask you to type in a choice. You can choose from either BATMAN, SUPERMAN, WONDER WOMAN, or a secret option that will guarantee you a win. The computer will display your choice and make its own choice. BATMAN beats SUPERMAN, SUPERMAN beats WONDER WOMAN, and WONDER WOMAN beats BATMAN. You will either win, tie, or lose. Your wins and the computers wins will be displayed in the scoreboard below. The first one to 5 round wins is the winner!'
-  document.getElementById('usersChoice').src = 'Images/batman.png'
-  document.getElementById('computersChoice').src = 'Images/batman.png'
+  document.getElementById('usersChoice').src = 'Images/batmans.png'
+  document.getElementById('computersChoice').src = 'Images/batmans.png'
   document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">The game has not started yet. You have selected the DC mode.</h3>';
   mode = 'dc'
   window.scrollTo(0, 0); //scrolls to the top of the page
