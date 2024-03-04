@@ -9,7 +9,7 @@ var userPoints = 0 // Sets initial score
 var computerPoints = 0  
 let mode = 'rps'
 
-const winmessages = [
+const winmessages = [ // Array picks win messages to display on 5 round wins.
   "Congratulations! You WIN!",
   "YOU WIN!",
   "THE USER HAS WON!"
@@ -102,7 +102,7 @@ function playGameRPS() {
     userPoints = 0
     computerPoints = 0
     var message = winmessages[Math.floor(Math.random()*winmessages.length)];
-    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">' + message + '</h3>';
+    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">' + message + '</h3>'; // Picks a random win message from the array
   }
 
   document.getElementById('userScore').innerHTML = '<h2 id="userScore">' + userPoints + '</h2>';
@@ -185,7 +185,7 @@ function playGamePokemon() {
   } else if (userPoints === 5) {
     userPoints = 0
     computerPoints = 0
-    var message = winmessages[Math.floor(Math.random()*winmessages.length)];
+    var message = winmessages[Math.floor(Math.random()*winmessages.length)]; // Picks a random win message from the array
     document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">' + message + '</h3>';
   }
 
@@ -270,7 +270,7 @@ function playGameDC() {
     userPoints = 0
     computerPoints = 0
     var message = winmessages[Math.floor(Math.random()*winmessages.length)];
-    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">' + message + '</h3>';
+    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">' + message + '</h3>'; // Picks a random win message from the array
   }
 
   document.getElementById('userScore').innerHTML = '<h2 id="userScore">' + userPoints + '</h2>';
