@@ -9,6 +9,12 @@ var userPoints = 0 // Sets initial score
 var computerPoints = 0  
 let mode = 'rps'
 
+const winmessages = [
+  "Congratulations! You WIN!",
+  "YOU WIN!",
+  "THE USER HAS WON!"
+];
+
 function gameChoice() {
   if (mode === 'rps') {
     playGameRPS()
@@ -93,9 +99,10 @@ function playGameRPS() {
     computerPoints = 0
     userPoints = 0
   } else if (userPoints === 5) {
-    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">You WIN!</h3>';
     userPoints = 0
     computerPoints = 0
+    var message = winmessages[Math.floor(Math.random()*winmessages.length)];
+    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">' + message + '</h3>';
   }
 
   document.getElementById('userScore').innerHTML = '<h2 id="userScore">' + userPoints + '</h2>';
@@ -176,9 +183,10 @@ function playGamePokemon() {
     computerPoints = 0
     userPoints = 0
   } else if (userPoints === 5) {
-    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">You WIN!</h3>';
     userPoints = 0
     computerPoints = 0
+    var message = winmessages[Math.floor(Math.random()*winmessages.length)];
+    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">' + message + '</h3>';
   }
 
   document.getElementById('userScore').innerHTML = '<h2 id="userScore">' + userPoints + '</h2>';
@@ -259,9 +267,10 @@ function playGameDC() {
     computerPoints = 0
     userPoints = 0
   } else if (userPoints === 5) {
-    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">You WIN!</h3>';
     userPoints = 0
     computerPoints = 0
+    var message = winmessages[Math.floor(Math.random()*winmessages.length)];
+    document.getElementById('messageResult').innerHTML = '<h3 class="align-items-center">' + message + '</h3>';
   }
 
   document.getElementById('userScore').innerHTML = '<h2 id="userScore">' + userPoints + '</h2>';
